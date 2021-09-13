@@ -1,0 +1,154 @@
+1.	How many copies of the book titled The Lost Tribe are owned by the library branch whose name is "Sharpstown"?
+
+	0 copies
+
+2.	How many copies of the book titled The Lost Tribe are owned by each library branch?
+
+	1 branch has 100 copies 
+
+3.	Retrieve the names of all borrowers who do not have any books checked out .
+
+	Marsh Stud
+	Alaine Galway
+	Sondra Peasey
+	Stinky Radbond
+	Carl MacAlaster
+	Brant Bartholat
+	Sella Penwarden
+	Frances Yitzowitz
+	Bree Scholtis
+	Bale Seath
+	Yehudi McMurdo
+	Adrienne Collishaw
+	Jyoti Breitling
+	Andriana Andersson
+	Troy Sawdy
+	Dinah Suddock
+	Isadora Pestell
+	Margette Swigger
+	Malinde Shimony
+	Emmalynne Mansford
+	Chere Hexam
+	Nico Dovidian
+	Garret Hawkin
+	Stacee Casaccia
+	Rhody Windows
+	Katti Swin
+	Tallia Bunney
+	Rutledge Capoun
+	Seymour Jewers
+	Kimberley Efford
+	Fawne Persey
+	Nester Layzell
+	Beverie Longhirst
+	Had Dimitrov
+	Conchita Baddoe
+	Skippie Lilian
+	Welch Wraxall
+	Yancy Febre
+	Roselle Chellenham
+	Allene Glozman
+	Sephira Da Costa
+	Matelda Girardet
+	Jareb Stonehewer
+	Bette-ann Lumley
+	Madelon Craggs
+	Frederigo Jumont
+	Marshall Tillard
+	Delmor Wittier
+	Erik Gave
+	Peri Salla
+	Leshia McGuirk
+	Haley M'Chirrie
+	Ninette Hernik
+	Layla Dimond
+	Danila Janiak
+	Walt Chandlar
+	Cassie Minet
+	Calvin Cecely
+	Jordain Taplin
+	Benito Buckleigh
+	Hillier Bayfield
+	Mord Holah
+	Andre Holborn
+	Son Korb
+	Serena Videneev
+	Wren Crossland
+	Rozele Casotti
+	Kerrin Ludy
+	Joice Northall
+
+4.	For each book that is loaned out from the "Sharpstown" branch and whose DueDate is today, retrieve the book title, the borrower's name, and the borrower's address.
+
+	Using the date 2018-09-04 06:07:27 there's one person that has a book due and their info is : Lynnette Minchinden	7086 Cordelia Road	216-110-3987
+
+5.	For each library branch, retrieve the branch name and the total number of books loaned out from that branch.
+
+	Sharpstown : 15
+	Central : 21 
+	Boyd : 21
+	Arkansas : 16
+	Pierstorff : 31
+	Prentice : 20
+	Derek : 7 
+	Nelson : 17
+	Hoard : 21
+	Dakota : 24
+	Transport : 30
+	Hoffman : 17
+	David : 15
+	Longview :23
+	Thackeray : 15
+	Stoughton : 21
+	Tennessee : 29
+	Knutson : 25
+	Redwing : 17
+	Steensland : 24
+	Eagle Crest : 19
+	Sommers : 14
+	Southridge : 8
+	Kenwood : 14
+	Scofield : 24
+	Jenifer : 31
+	Marquette : 26
+	Red Cloud : 19
+	Forest : 21
+	Bartelt : 26
+	Cambridge : 20
+	Homewood : 20
+	Sunbrook : 12
+	Northview : 24
+	Banding : 16
+	Menomonie : 26
+	Barnett : 30
+	Ridge Oak : 16
+	Trailsway : 19
+	Farragut : 25
+	Ruskin : 15
+	Victoria : 19
+	Blaine : 14
+	Jackson : 19
+	Birchwood : 18
+	Hauk : 17
+	Twin Pines : 23
+	Clyde Gallagher : 19
+	Mayfield : 14
+	Atwood : 23
+
+6.	Retrieve the names, addresses, and number of books checked out for all borrowers who have more than five books checked out. 
+
+	There are 4 people who have 5 or more books checked out, they are :
+	Derron Larking	3051 Elgar Hill	642-848-7960
+	Calida Radage   7569 Mendota Terrace  446-114-8980
+	Baird Ruttgers  2 Forest Run Park  307-732-0295
+	Ricky Hurndall  7 Stoughton Junction  796-675-9826
+	
+7.	For each book authored (or co-authored) by "Stephen King", retrieve the title and the number of copies owned by the library branch whose name is "Central"
+
+	Central does not carry any copies of a Stephen King book 
+
+
+
+
+
+
