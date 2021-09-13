@@ -1,0 +1,75 @@
+1.	 Which class would you use to store your birthday in years, months, days, seconds, and nanoseconds?
+
+	 You could use the LocalDateTimeClass, along with the Period class to give the date in the units desired
+
+2.	 Given a random date, how would you find the date of the previous Thursday?
+
+	 The Previous method of TemporalAdjuster can be used to find it
+
+3.	 What is the difference between a ZoneId and a ZoneOffset?
+	 
+	 ZoneOffest only tracks the offset from Greenwich/UTC time while ZoneId also tracks the offset but in relation to a particular 
+
+4.	 How would you convert an Instant to a ZonedDateTime? How would you convert a ZonedDateTime to an Instant?
+
+	 For the first part you can convert an instant to a ZoneDateTinme using ofInstant, while also supplying a Zone Id
+	 For the second part, ZoneDateTime has the method toInstant to convert it to an Instant
+    
+5.	 Write an example that, for a given year, reports the length of each month within that year.
+
+	 For (Month month : Month.values()){
+	 	YearMonth ym = YearMonth.of(year, month);
+	 	System.out.println(ym.lenghtOfMonth() + " " + month + " " + year
+
+6.	 Write an example that, for a given month of the current year, lists all of the Mondays in that month.
+	 
+	 System.out.print("Enter the month you'd like to see all the Mondays of : ");
+	 String i = sc.nextLine();
+	 
+	 Month month1 = Month.valueOf(i);
+	 LocalDate local = Year.now().atMonth(month1).atDay(1).with(TemporalAdjusters.FirstInMonth(DayOfWeek.MONDAY);
+	 Month month2 = local.getMonth();
+	 
+	 while(month1 == month2){
+	 	  System.out.printf(%s%n, local);
+	 	  local = local.with(TemproalAdjusters.next(DayOfWeek.MONDAY));
+	 	  month2 = local.getMonth();
+	 };
+
+7.	 Write an example that tests whether a given date occurs on Friday the 13th.
+
+	 u_month = sc.nextLine();
+	 u_day = sc.nextInt();
+	 
+	 Month month = Month.valueOf(u_month);
+	 date = Year.now().atMonth(u_month).atDay(u_day);
+	 
+	 if(date.get(ChronoField.DAY_OF_MONTH) == 13 && date.get(ChronoField.DAY_OF_WEEK) == 5){
+	 	System.out.print("The date is on Friday the 13th");
+	 	}
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
