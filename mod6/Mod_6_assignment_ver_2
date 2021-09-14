@@ -1,0 +1,57 @@
+1.	How many copies of the book titled The Lost Tribe are owned by the library branch whose name is "Sharpstown"?
+
+	SELECT * FROM library.tbl_book_copies WHERE branchId = 1 AND bookId = 1;
+
+2.	How many copies of the book titled The Lost Tribe are owned by each library branch?
+
+	SELECT * FROM library.tbl_book_copies WHERE bookId = 1;
+
+3.	Retrieve the names of all borrowers who do not have any books checked out .
+
+	SELECT library.tbl_borrower.name 
+	FROM library.tbl_borrower
+	LEFT JOIN library.tbl_book_loans ON library.tbl_book_loans.cardNo = library.tbl_borrower.cardNo
+	WHERE library.tbl_book_loans.cardNo IS NULL
+	GROUP BY library.tbl_borrower.name;
+
+4.	For each book that is loaned out from the "Sharpstown" branch and whose DueDate is today, retrieve the book title, the borrower's name, and the borrower's address.
+
+	SELECT *
+	FROM library.tbl_borrower
+	LEFT JOIN library.tbl_book_loans ON library.tbl_book_loans.cardNo = library.tbl_borrower.cardNo
+	WHERE library.tbl_book_loans.dueDate = "2018-09-04 06:07:27"
+	GROUP BY library.tbl_borrower.name;
+
+5.	For each library branch, retrieve the branch name and the total number of books loaned out from that branch.
+
+	SELECT library.tbl_library_branch.branchName, COUNT(*)
+	FROM library.tbl_library_branch
+	LEFT JOIN library.tbl_book_loans ON library.tbl_book_loans.branchId = library.tbl_library_branch.branchId
+	GROUP BY library.tbl_library_branch.branchName;
+
+6.	Retrieve the names, addresses, and number of books checked out for all borrowers who have more than five books checked out. 
+
+	SELECT * 
+	FROM library.tbl_borrower
+	JOIN (SELECT COUNT(*)
+		FROM library.tbl_book_loans
+        GROUP BY library.tbl_book_loans.cardNo
+        HAVING COUNT(*) > 5) info 
+        ON library.tbl_borrower.cardNo
+        GROUP BY cardNo
+        ORDER BY cardNo;
+	
+7.	For each book authored (or co-authored) by "Stephen King", retrieve the title and the number of copies owned by the library branch whose name is "Central"
+
+	JOIN library.tbl_author 
+	ON library.tbl_book.authId = library.tbl_author.authorId
+	AND library.tbl_author.authorId = 1
+	JOIN library.tbl_book_copies 
+	ON library.tbl_book_copies.bookId = library.tbl_book.bookId
+	AND library.tbl_book_copies.branchId = 2;
+
+
+
+
+
+
